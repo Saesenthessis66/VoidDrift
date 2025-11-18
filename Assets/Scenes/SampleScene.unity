@@ -480,6 +480,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1858807786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3389353602472765359, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+  m_PrefabInstance: {fileID: 8318470769533888064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1858807792
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858807786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3040627c3abe25e45b5a4d0a1030af8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4038144367626827107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +572,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 189363824687313592, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Radius
+      value: 0.1300169
+      objectReference: {fileID: 0}
+    - target: {fileID: 189363824687313592, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.014540523
+      objectReference: {fileID: 0}
+    - target: {fileID: 189363824687313592, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.18993577
+      objectReference: {fileID: 0}
+    - target: {fileID: 289903628846169279, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.1735851
+      objectReference: {fileID: 0}
+    - target: {fileID: 289903628846169279, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5890004
+      objectReference: {fileID: 0}
+    - target: {fileID: 289903628846169279, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.013485007
+      objectReference: {fileID: 0}
+    - target: {fileID: 289903628846169279, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0018175542
+      objectReference: {fileID: 0}
+    - target: {fileID: 289903628846169279, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 289903628846169279, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3330660786592091104, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: checkRadius
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 3389353602472765359, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -591,7 +658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: accel
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: decel
@@ -603,16 +670,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: jumpForce
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: allowDoubleJump
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: airControlFactor
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820815693843168478, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5687616882660271906, guid: 98aee0ad41d2fcc499470851a30053bf, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3389353602472765359, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1858807792}
   m_SourcePrefab: {fileID: 100100000, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
