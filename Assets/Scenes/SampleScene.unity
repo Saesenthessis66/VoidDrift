@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.0200007, y: 6.730001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,21 +406,21 @@ MonoBehaviour:
   CameraDistance: 10
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0, y: 0}
+    ScreenPosition: {x: 0, y: 0.3}
     DeadZone:
-      Enabled: 0
-      Size: {x: 0.2, y: 0.2}
+      Enabled: 1
+      Size: {x: 0.15, y: 0.2}
     HardLimits:
       Enabled: 0
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0.15, y: 0.2, z: 1}
   Lookahead:
-    Enabled: 0
-    Time: 0
-    Smoothing: 0
+    Enabled: 1
+    Time: 0.1
+    Smoothing: 0.3
     IgnoreY: 0
 --- !u!114 &1158477424
 MonoBehaviour:
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 1858807797}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -474,7 +474,7 @@ Transform:
   m_GameObject: {fileID: 1158477422}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.0200007, y: 6.730001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -507,6 +507,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &1858807797 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+  m_PrefabInstance: {fileID: 8318470769533888064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4038144367626827107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,12 +525,20 @@ PrefabInstance:
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6890160960073919838, guid: 72947eedb5177d84388774956161fbd6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16.241823
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890160960073919838, guid: 72947eedb5177d84388774956161fbd6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9669664
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890160960073919838, guid: 72947eedb5177d84388774956161fbd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0403
+      value: -0.9486
       objectReference: {fileID: 0}
     - target: {fileID: 6890160960073919838, guid: 72947eedb5177d84388774956161fbd6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4113
+      value: -2.0837
       objectReference: {fileID: 0}
     - target: {fileID: 6890160960073919838, guid: 72947eedb5177d84388774956161fbd6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -574,15 +587,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 189363824687313592, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_Radius
-      value: 0.1300169
+      value: 0.16392317
       objectReference: {fileID: 0}
     - target: {fileID: 189363824687313592, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_Offset.x
-      value: 0.014540523
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 189363824687313592, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_Offset.y
-      value: -0.18993577
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 289903628846169279, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_Size.x
@@ -608,6 +621,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.61
       objectReference: {fileID: 0}
+    - target: {fileID: 2224663724669353099, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_GravityScale
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 3330660786592091104, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: checkRadius
       value: 0.35
@@ -617,12 +634,24 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -656,21 +685,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3402392102208643479, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: accel
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: decel
-      value: 8
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: maxSpeed
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: jumpForce
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: allowDoubleJump
@@ -678,7 +711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6478758838303914937, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: airControlFactor
-      value: 0.4
+      value: 0.138
       objectReference: {fileID: 0}
     - target: {fileID: 8820815693843168478, guid: 480bb91e87907124abc2c98c4002984a, type: 3}
       propertyPath: m_Sprite

@@ -10,16 +10,15 @@ public class GroundCheck_ByTag : MonoBehaviour
 
     void Reset()
     {
-        // automatyczne przypisanie referencji
-        if (playerMovement == null) playerMovement = GetComponentInParent<PlayerHorizontalMovement_InputSystem>();
+        if (playerMovement == null)
+            playerMovement = GetComponentInParent<PlayerHorizontalMovement_InputSystem>();
 
-        // automatyczne znalezienie collidera
-        if (groundCheckCollider == null) groundCheckCollider = GetComponent<CircleCollider2D>();
+        if (groundCheckCollider == null)
+            groundCheckCollider = GetComponent<CircleCollider2D>();
     }
 
     void Awake()
     {
-        // upewnij się, że collider jest znaleziony
         if (groundCheckCollider == null)
             groundCheckCollider = GetComponent<CircleCollider2D>();
 
@@ -31,16 +30,24 @@ public class GroundCheck_ByTag : MonoBehaviour
     {
         if (groundCheckCollider == null) return;
 
+        // --- GLOBALNE centrum koła (offset lokalny → globalna pozycja)
+        Vector2 center = groundCheckCollider.transform.TransformPoint(groundCheckCollider.offset);
+
+        // --- GLOBALNY promień (uwzględnia skalowanie)
+        float radius = groundCheckCollider.radius *
+                       Mathf.Max(
+                           groundCheckCollider.transform.lossyScale.x,
+                           groundCheckCollider.transform.lossyScale.y
+                       );
+
         bool grounded = false;
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            (Vector2)transform.position + groundCheckCollider.offset,
-            groundCheckCollider.radius
-        );
+
+        // --- DETEKCJA ZIEMI ---
+        Collider2D[] hits = Physics2D.OverlapCircleAll(center, radius);
 
         foreach (var hit in hits)
         {
-            // ignoruj kolizje z samym sobą
-            if (hit == groundCheckCollider) continue;
+            if (hit == groundCheckCollider) continue;  // pomiń siebie
 
             if (hit.CompareTag(groundTag))
             {
@@ -55,10 +62,21 @@ public class GroundCheck_ByTag : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
+        if (groundCheckCollider == null)
+            groundCheckCollider = GetComponent<CircleCollider2D>();
+
         if (groundCheckCollider == null) return;
 
         Gizmos.color = Color.cyan;
-        Vector2 center = (Vector2)transform.position + groundCheckCollider.offset;
-        Gizmos.DrawWireSphere(center, groundCheckCollider.radius);
+
+        Vector2 center = groundCheckCollider.transform.TransformPoint(groundCheckCollider.offset);
+
+        float radius = groundCheckCollider.radius *
+                       Mathf.Max(
+                           groundCheckCollider.transform.lossyScale.x,
+                           groundCheckCollider.transform.lossyScale.y
+                       );
+
+        Gizmos.DrawWireSphere(center, radius);
     }
 }
