@@ -67,8 +67,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.18
+  m_Offset: {x: 0.03, y: -0.15}
+  m_Radius: 0.16392317
 --- !u!114 &3330660786592091104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2224663724669353099}
   - component: {fileID: 6478758838303914937}
   - component: {fileID: 289903628846169279}
-  - component: {fileID: -1778106366455113874}
+  - component: {fileID: 5913619220048243684}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -113,9 +113,9 @@ Transform:
   m_GameObject: {fileID: 3389353602472765359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -1.02, y: 0.73, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7695921619492401938}
   m_Father: {fileID: 0}
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6406013571548007605, guid: c898c5c5e87458844aea7c65a8474c41, type: 3}
+  m_Sprite: {fileID: 5687616882660271906, guid: 98aee0ad41d2fcc499470851a30053bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -193,7 +193,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.75
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -218,14 +218,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHorizontalMovement_InputSystem
   rb: {fileID: 2224663724669353099}
+  animator: {fileID: 0}
   moveAction: {fileID: 656093289479169520, guid: 768a57badbb70fd498634301d110a8cb, type: 3}
   jumpAction: {fileID: 8813087623213175010, guid: 768a57badbb70fd498634301d110a8cb, type: 3}
-  maxSpeed: 8
-  accel: 60
-  decel: 80
-  airControlFactor: 0.6
-  jumpForce: 14
-  allowDoubleJump: 0
+  maxSpeed: 10
+  accel: 50
+  decel: 40
+  airControlFactor: 0.138
+  jumpForce: 5
+  allowDoubleJump: 1
 --- !u!61 &289903628846169279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -260,19 +261,19 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0019643456, y: 0}
+  m_Offset: {x: 0.013485007, y: -0.0018175542}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.32}
+    oldSize: {x: 0.25, y: 0.61}
     newSize: {x: 0.3, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.18630809, y: 0.32}
+  m_Size: {x: 0.1735851, y: 0.5890004}
   m_EdgeRadius: 0
---- !u!95 &-1778106366455113874
+--- !u!95 &5913619220048243684
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
