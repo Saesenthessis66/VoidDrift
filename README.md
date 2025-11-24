@@ -4,13 +4,13 @@
 - [x] Setup
 
 ## 2. Player Controller
-- [ ] Create **Player** object (Sprite + Rigidbody2D + Collider2D)
-- [ ] Implement basic **horizontal movement** (left/right)
-- [ ] Implement **jumping** with correct physics
-- [ ] Add **velocity clamping** (limit horizontal speed)
-- [ ] Use placeholder **animations** (idle / walk / jump)
-- [ ] Set up **Cinemachine camera** to smoothly follow the player
-- [ ] Ensure proper **collisions** (ground, walls, hazards)
+- [x] Create **Player** object (Sprite + Rigidbody2D + Collider2D)
+- [x] Implement basic **horizontal movement** (left/right)
+- [x] Implement **jumping** with correct physics
+- [x] Add **velocity clamping** (limit horizontal speed)
+- [x] Use placeholder **animations** (idle / walk / jump)
+- [x] Set up **Cinemachine camera** to smoothly follow the player
+- [x] Ensure proper **collisions** (ground, walls, hazards)
 
 ---
 
